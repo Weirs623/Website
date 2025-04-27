@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เว็บสัตว์ศึกษา</title>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        .category {
+            margin: 30px 0;
+        }
+        .category h2 {
+            color: #00695c;
+        }
+        .animals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .animal {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            width: 220px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .animal:hover {
+            transform: translateY(-5px);
+        }
+        .animal img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .info {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .show {
+            display: block;
+        }
+        button {
+            margin-top: 10px;
+            background-color: #4db6ac;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #00897b;
+        }
+    </style>
+</head>
+<body>
+
+<h1>เว็บสัตว์ศึกษา</h1>
+
+<div class="category">
+    <h2>สัตว์ปีก</h2>
+    <div class="animals">
+
+        <div class="animal">
+            <img src="https://img2.pic.in.th/pic/1000107225.jpg" alt="นกหงส์หยก">
+            <h3>นกหงส์หยก</h3>
+            <button onclick="toggleInfo('info-budgie')">ดูข้อมูล</button>
+            <div id="info-budgie" class="info">
+                <b>ชื่อวิทยาศาสตร์:</b> Melopsittacus undulatus<br>
+                นกขนาดเล็ก เลี้ยงง่าย สีสวย กัดไม่แรง<br>
+                <b>อาหาร:</b> มิลเลต, ข้าวโพด, เมล็ดทานตะวัน<br>
+                <b>รังแนะนำ:</b> รังมะพร้าว<br>
+                <b>สังคม:</b> เลี้ยงรวมจะเลือกคู่เอง<br>
+                <b>ราคา:</b> 50-800 บาท<br>
+                <b>อายุขัย:</b> 5-10 ปี<br>
+                <b>แหล่งกำเนิด:</b> ออสเตรเลีย
+            </div>
+        </div>
+
+        <div class="animal">
+            <img src="https://img5.pic.in.th/file/secure-sv1/10001072275ce5c7b9da729e7c.jpg" alt="นกมาคอว์">
+            <h3>นกมาคอว์</h3>
+            <button onclick="toggleInfo('info-macaw')">ดูข้อมูล</button>
+            <div id="info-macaw" class="info">
+                <b>ชื่อวิทยาศาสตร์:</b> Orthopsittaca<br>
+                นกแก้วขนาดใหญ่ สีสันสดใส<br>
+                <b>อาหาร:</b> เมล็ดพืช, ถั่ว, อาหารเม็ดนกใหญ่<br>
+                <b>รังแนะนำ:</b> รังเพาะขนาดใหญ่, ขี้เลื่อยรองรัง<br>
+                <b>สังคม:</b> ชอบเล่น, รักอิสระ<br>
+                <b>ราคา:</b> 10,000 - 5,000,000 บาท<br>
+                <b>แหล่งกำเนิด:</b> เม็กซิโก, อเมริกาใต้
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="category">
+    <h2>สัตว์เลี้ยงลูกด้วยนม</h2>
+    <div class="animals">
+
+        <div class="animal">
+            <img src="https://img2.pic.in.th/pic/1000107228.jpg" alt="สุนัข">
+            <h3>สุนัข</h3>
+            <button onclick="toggleInfo('info-dog')">ดูข้อมูล</button>
+            <div id="info-dog" class="info">
+                <b>ชื่อสามัญ:</b> สุนัข (Dog)<br>
+                สัตว์เลี้ยงลูกด้วยนม ฉลาด เป็นมิตร<br>
+                <b>อาหาร:</b> อาหารเม็ด, อาหารสด<br>
+                <b>คุณสมบัติ:</b> ซื่อสัตย์, ช่วยเฝ้าบ้าน<br>
+                <b>ราคา:</b> หลากหลายขึ้นกับสายพันธุ์<br>
+                <b>อายุขัย:</b> ประมาณ 10-15 ปี
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleInfo(id) {
+        var info = document.getElementById(id);
+        if (info.classList.contains('show')) {
+            info.classList.remove('show');
+        } else {
+            info.classList.add('show');
+        }
+    }
+</script>
+
+</body>
+</html>
